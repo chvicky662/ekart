@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo"> <h1>🛍️ Flipkart Clone</h1> </div>
+        <input type="text" id="search" placeholder="Search for products..." onkeyup="searchProducts()">
+        <div class="header-icons">
+            <button class="login-btn">Login</button>
+            <button class="cart-btn">🛒 Cart</button>
+        </div>
+    </header>
+
+    <nav>
+        <div class="categories">
+            <div class="category"><img src="images/mobiles.png" alt="Mobiles"> Mobiles</div>
+            <div class="category"><img src="images/electronics.png" alt="Electronics"> Electronics</div>
+            <div class="category"><img src="images/fashion.png" alt="Fashion"> Fashion</div>
+            <div class="category"><img src="images/home.png" alt="Home"> Home Appliances</div>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <img src="images/banner.jpg" alt="Offers Banner">
+    </div>
+
+    <h2>Best of Electronics</h2>
+    <div id="electronics-section">
+        <div class="product-card">
+            <img src="images/laptop.png" alt="Laptop">
+            <p>Laptop - $799</p>
+            <button onclick="addToCart('Laptop', 799)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="images/earbuds.png" alt="Earbuds">
+            <p>Earbuds - $99</p>
+            <button onclick="addToCart('Earbuds', 99)">Add to Cart</button>
+        </div>
+    </div>
+
+    <h2>🛒 Shopping Cart</h2>
+    <div id="cart">
+        <ul id="cart-items"></ul>
+        <p><strong>Total:</strong> $<span id="total">0</span></p>
+        <button id="checkout" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Flipkart Clone. All rights reserved.</p>
+        <p>Contact us: support@flipkartclone.com</p>
+    </footer>
+</body>
+</html>
